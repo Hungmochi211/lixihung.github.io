@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Hỏi Lì Xì</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="lixi.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro&family=Dancing+Script&family=Lobster&family=Pacifico&family=Playfair+Display&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <audio autoplay>
+        <source src="Image/ThemeMusic.mp3">
+    </audio>
+    <div class="title">
+        <img src="Image\AmiBeo.gif" alt="" srcset="">
+        <h1>Lì xì cho hùng</h1>
+        <img src="Image\AmiBeo2.gif" alt="" class="imgmeo">
+    </div>
+    <div class="container">
+        <div class="avatar">
+            <img src="Image\KoLiXiThatA.jpg">
+            <p class="chat-bubble">
+                Năm mới chúc bạn sớm đạt được thứ mình muốn ngày càng đẹp lên, khỏe mạnh không lo bệnh tật!
+            </p>
+        </div>
+
+        <div class="avatar right">
+            <p class="chat-bubble">
+                Chúc bạn giàu sang phú quý ăn chơi xa đọa không hết tiền 
+            </p>
+            <img src="Image\Real.jpg">
+        </div>
+
+        <div class="avatar three">
+            <img src="Image\PhaiLiXi.jpg">
+            <p class="chat-bubble">
+                Chủ web chưa năm nào đi chúc nên lời chúc không hay nhưng mà thật lòng(Real trust me).<br><br>
+                Đọc hết mấy câu chúc rồi nhớ lì xì đấy<br>(kéo xuống dưới).
+            </p>
+        </div>
+
+        <div class="content">
+            <p>Bạn có muốn lì xì cho người đẹp trai này không?</p>
+            <div class="buttons">
+                <button class="yes" onclick="accept()">Có </button>
+                <button class="no" id="noBtn" onclick="mustLixi()">Không</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- QR -->
+    <div class="qr-box" id="qrBox">
+        <div class="qr" id="clickYes">
+            <div class="tilte-qr">
+                <img src="Image\Monleo.jpg" alt="" class="img-cat">
+                <h3>Lì xì tùy tâm nhưng tâm đừng thấp quá </h3>
+            </div>
+            <img src="Image\Qr.jpg">
+            <br><br>
+            <button onclick="closeQR()">cảm ơn vì đã lì xì</button>
+        </div>
+
+        <div class="qr" id="clickko">
+            <div class="tilte-qr">
+                <img src="Image\Vcl.jpg" alt="" class="img-dog">
+                <h3>Không cần phải ngại đâu qr đây quét đi</h3>
+            </div>
+            <img src="Image\Qr.jpg">
+            <br><br>
+            <button onclick="closeQR()">cảm ơn vì đã lì xì</button>
+        </div>
+    </div>
+
+    <script>
+        const noBtn = document.getElementById("noBtn");
+
+        // Chấp nhận lì xì
+        function accept() {
+            document.getElementById("qrBox").style.display = "flex";
+            document.getElementById("clickYes").style.display = "block";
+            document.getElementById("clickko").style.display = "none";
+        }
+
+        function mustLixi() {
+            document.getElementById("qrBox").style.display = "flex";
+            document.getElementById("clickYes").style.display = "none";
+            document.getElementById("clickko").style.display = "block";
+        }
+
+        // Đóng QR
+        function closeQR() {
+            document.getElementById("qrBox").style.display = "none";
+        }
+    </script>
+
+</body>
+
+</html>
